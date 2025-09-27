@@ -1,0 +1,13 @@
+dbt_hive_project:               # 要和 dbt_project.yml 里的 profile: 对应
+  target: dev
+  outputs:
+    dev:
+      type: hive            # ← 改成 sparkl
+      method: thrift            # ← 改成 sparkl
+      host: 188.239.36.76    # HiveServer2 地址 兼容
+      port: 10000           # HiveServer2 默认端口兼容
+      schema: default       # Hive 的数据库名 (类似 schema)
+      auth: CUSTOM          # 认证方式 (常见: CUSTOM, NOSASL, KERBEROS)
+      username: hive_user   # Hive 用户名
+      password: P@ssw0rd@1234    # 如果用密码认证
+      threads: 4            # 并发线程数
