@@ -1,0 +1,9 @@
+{
+  "project_name": "dbt_hive_project",
+  "environment": "dev",
+  "adapter_type": "spark",
+  "host": "188.239.36.76",
+  "port": 10000,
+  "schema": "default",
+  "auth": "CUSTOM"
+}
