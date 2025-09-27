@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "第一个测试模型"
+    columns:
+      - name: id
+        description: "主键 ID"
+        tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "第二个测试模型"
+    columns:
+      - name: id
+        description: "主键 ID"
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_user_balance
+    description: "用户余额快照"
+    columns:
+      - name: balance
+        description: "每日余额"
+        tests:
+          - not_null
+          - unique
